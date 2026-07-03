@@ -1,0 +1,250 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #0a0e1f;
+    color: #f1f5f9;
+    font-family: Arial, sans-serif;
+  }
+
+  section {
+    padding: 70px 24px;
+  }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  h1, h2 {
+    font-weight: bold;
+  }
+
+  p {
+    color: #b6bdd1;
+    line-height: 1.6;
+  }
+
+  /* ===== Hero (superposition en Grid) ===== */
+  .hero {
+    display: grid;
+    grid-template-areas: "stack";
+    place-items: center;
+    min-height: 80vh;
+    padding: 24px;
+    text-align: center;
+  }
+
+  .hero > * {
+    grid-area: stack;
+  }
+
+  .hero .background {
+    width: 100%;
+    height: 100%;
+    background-color: #10152b;
+  }
+
+  .hero .content {
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .badge {
+    font-size: 0.8rem;
+    color: #22d3ee;
+    border: 1px solid #22d3ee;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+    line-height: 1.2;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 6px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: 1px solid #232a4d;
+    background: transparent;
+    color: #f1f5f9;
+    text-decoration: none;
+  }
+
+  .btn-primary {
+    background-color: #22d3ee;
+    border-color: #22d3ee;
+    color: #0a0e1f;
+    font-weight: bold;
+  }
+
+  /* ===== Tarifs (Flexbox) ===== */
+  .tarifs h2 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+
+  .tarifs > .wrap > p {
+    margin-bottom: 30px;
+  }
+
+  .deck {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .plan {
+    flex: 1 1 250px;
+    max-width: 300px;
+    background-color: #10152b;
+    border: 1px solid #232a4d;
+    border-radius: 10px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .plan.featured {
+    border-color: #22d3ee;
+  }
+
+  .plan .name {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #b6bdd1;
+  }
+
+  .plan .price {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin: 10px 0 4px;
+  }
+
+  .plan .price span {
+    font-size: 0.9rem;
+    color: #b6bdd1;
+    font-weight: normal;
+  }
+
+  .plan .desc {
+    font-size: 0.88rem;
+    margin-bottom: 16px;
+  }
+
+  .plan ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex: 1;
+  }
+
+  .plan li {
+    font-size: 0.85rem;
+  }
+
+  .plan li::before {
+    content: "✓ ";
+    color: #22d3ee;
+  }
+
+  .plan button {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #232a4d;
+    background: transparent;
+    color: #f1f5f9;
+    cursor: pointer;
+  }
+
+  .plan.featured button {
+    background-color: #22d3ee;
+    border-color: #22d3ee;
+    color: #0a0e1f;
+    font-weight: bold;
+  }
+
+  /* ===== Portfolio (Grid en bento) ===== */
+  .portfolio h2 {
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+
+  .portfolio > .wrap > p {
+    margin-bottom: 30px;
+  }
+
+  .bento {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: minmax(180px, auto) minmax(150px, auto) minmax(130px, auto);
+    gap: 14px;
+    grid-template-areas:
+      "hero hero hero"
+      "medium medium side"
+      "f1 f2 f3";
+  }
+
+  .tile {
+    border-radius: 10px;
+    border: 1px solid #232a4d;
+    padding: 20px;
+    background-color: #10152b;
+  }
+
+  .tile .tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #22d3ee;
+  }
+
+  .tile h3 {
+    font-size: 1.1rem;
+    margin-top: 8px;
+  }
+
+  .tile p {
+    font-size: 0.85rem;
+    margin-top: 6px;
+  }
+
+  .t-hero {
+    grid-area: hero;
+    background-color: #12234a;
+  }
+
+  .t-hero h3 {
+    font-size: 1.5rem;
+  }
+
+  .t-medium { grid-area: medium; }
+  .t-side { grid-area: side; }
+  .t-f1 { grid-area: f1; }
+  .t-f2 { grid-area: f2; }
+  .t-f3 { grid-area: f3; }
+
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #b6bdd1;
+    font-size: 0.85rem;
+    border-top: 1px solid #232a4d;
+  }
